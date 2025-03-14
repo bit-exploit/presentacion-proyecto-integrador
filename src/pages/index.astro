@@ -1,0 +1,54 @@
+---
+import "./src/styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>Proyecto Integrador | EQUIPO 11</title>
+    <meta name="author" content="bit-exploit" />
+  </head>
+  <body>
+    <main class="presentation-container">
+      <section class="bg-blue-500">
+        <h1>Proyecto Integrador</h1>
+      </section>
+      <section class="bg-emerald-500">
+        <h2>Introducción</h2>
+      </section>
+      <section class="bg-rose-500">
+        <h2>Actividad 1</h2>
+      </section>
+    </main>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("keydown", (e: KeyboardEvent) => {
+    const container = document.querySelector(
+      ".presentation-container"
+    ) as HTMLElement;
+    if (!container) return;
+
+    const sectionHeight = window.innerHeight;
+    const currentScroll = container.scrollTop;
+
+    if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+      // Siguiente sección
+      container.scrollTo({
+        top: currentScroll + sectionHeight,
+        behavior: "smooth",
+      });
+    } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+      // Sección anterior
+      container.scrollTo({
+        top: currentScroll - sectionHeight,
+        behavior: "smooth",
+      });
+    }
+  });
+</script>
