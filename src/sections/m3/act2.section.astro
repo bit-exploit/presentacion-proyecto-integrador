@@ -1,0 +1,56 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props as Props;
+---
+
+<section class="p-10 grid lg:place-content-center">
+  <div class="flex max-sm:flex-wrap gap-20 max-w-6xl">
+    <div class="flex-1/4 flex flex-col lg:justify-between gap-6">
+      <h2 class="text-5xl font-extrabold">{title}</h2>
+      <p class="text-pretty text-3xl">
+        Los mecanismos de participación social dentro del marco legal son
+        herramientas que permiten a la ciudadanía participar en la toma de
+        decisiones. La participación ciudadana se regula en leyes como la Ley de
+        Asistencia Social, la Ley General de Desarrollo Social y la Ley sobre el
+        Sistema Nacional de Asistencia Social.
+      </p>
+    </div>
+    <ul class="text-left list-disc list-inside flex-1/3 text-2xl">
+      <li class="mb-2">
+        <strong>Voto</strong>: Derecho a elegir representantes.
+      </li>
+      <li class="mb-2">
+        <strong>Referéndum</strong>: Votar para aprobar o rechazar leyes.
+      </li>
+      <li class="mb-2">
+        <strong>Iniciativa ciudadana</strong>: Proponer cambios en las leyes.
+      </li>
+      <li class="mb-2">
+        <strong>Plebiscito</strong>: Consultar a la población sobre cuestiones
+        políticas generales
+      </li>
+      <li class="mb-2">
+        <strong>Consulta ciudadana</strong>: Obtener la opinión de las personas
+        sobre temas de interés público
+      </li>
+      <li class="mb-2">
+        <strong>Audiencias públicas</strong>: Expresar opiniones, sugerencias o
+        preocupaciones sobre proyectos o políticas gubernamentales
+      </li>
+      <li class="mb-2">
+        <strong>Consejos ciudadanos</strong>: Asesorar a las autoridades sobre
+        temas concretos
+      </li>
+      <li class="mb-2">
+        <strong>Participación en presupuesto</strong>: Colaborar en la
+        asignación de recursos y la toma de decisiones presupuestarias
+      </li>
+      <li class="mb-2">
+        <strong>Cabildos abiertos</strong>: Resolver dudas preguntando
+        directamente a los miembros del ayuntamiento o consejo municipal
+      </li>
+    </ul>
+  </div>
+</section>

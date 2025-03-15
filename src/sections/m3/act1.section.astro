@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props as Props;
+---
+
+<section
+  class="w-full min-h-[100dvh] flex flex-col lg:justify-center items-center bg-cover bg-center bg-orange-300 text-zinc-800 p-8"
+>
+  <div class="w-full h-full grid">
+    <div class="text-right">
+      <h1 class="text-5xl font-extrabold mb-6">{title}</h1>
+      <p class="text-3xl mb-4">
+        La Constitución Mexicana garantiza derechos fundamentales que protegen a
+        todos los ciudadanos.
+      </p>
+    </div>
+    <ul class="text-left list-disc list-inside text-3xl grid gap-4">
+      <li class="mb-2">
+        <strong>Artículo 1º</strong>: Prohíbe la esclavitud y garantiza la
+        igualdad.
+      </li>
+      <li class="mb-2">
+        <strong>Artículo 3º</strong>: Derecho a la educación gratuita y laica.
+      </li>
+      <li class="mb-2">
+        <strong>Artículo 6º</strong>: Libertad de expresión, con límites para no
+        afectar a terceros.
+      </li>
+      <li class="mb-2">
+        <strong>Artículo 9º</strong>: Libertad de asociación y reunión pacífica.
+      </li>
+    </ul>
+  </div>
+</section>
