@@ -1,0 +1,50 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props as Props;
+---
+
+<section
+  class="w-full min-h-[100dvh] flex flex-col lg:justify-center items-center bg-cover bg-center bg-neutral-100 text-zinc-800 p-10"
+>
+  <div class="max-w-6xl">
+    <h1 class="text-5xl font-bold mb-16">{title}</h1>
+    <div class="flex max-sm:flex-wrap gap-16">
+      <div>
+        <p class="text-3xl mb-8">
+          La globalización ha transformado la economía, política y cultura de
+          México. A continuación, se resumen los principales antecedentes:
+        </p>
+        <ul class="text-left list-disc list-inside text-2xl">
+          <li class="mb-2">
+            <strong>Crisis económica en los 80:</strong> Deuda externa, inflación
+            y devaluación del peso.
+          </li>
+          <li class="mb-2">
+            <strong>Transición al neoliberalismo:</strong> Privatización de empresas
+            y apertura a inversión extranjera.
+          </li>
+          <li class="mb-2">
+            <strong>Firma del TLCAN (1994):</strong> Mayor comercio internacional
+            y crecimiento industrial.
+          </li>
+        </ul>
+      </div>
+      <ul class="text-left list-disc list-inside text-2xl">
+        <li class="mb-2">
+          <strong>Fin de la Guerra Fría:</strong> México se alinea con EE.UU. y Europa,
+          abandonando el proteccionismo.
+        </li>
+        <li class="mb-2">
+          <strong>Expansión tecnológica:</strong> Internet y redes sociales revolucionan
+          la comunicación.
+        </li>
+        <li class="mb-2">
+          <strong>Influencia cultural:</strong> Hollywood y la música pop impactan
+          en las tradiciones mexicanas.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

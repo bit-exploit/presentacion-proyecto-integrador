@@ -2,9 +2,14 @@
 import "../styles/global.css";
 
 import MainSection from "../sections/m1/main.section.astro";
-import Actividad1 from "../sections/m1/act1.section.astro";
-import Actividad2 from "../sections/m1/act2.section.astro";
-import Actividad3 from "../sections/m1/act3.section.astro";
+import M1Actividad1 from "../sections/m1/act1.section.astro";
+import M1Actividad2 from "../sections/m1/act2.section.astro";
+import M1Actividad3 from "../sections/m1/act3.section.astro";
+import M2ActividadPre from "../sections/m2/actpre.section.astro";
+import M2Actividad1 from "../sections/m2/act1.section.astro";
+import M2Actividad2 from "../sections/m2/act2.section.astro";
+import M2Actividad3 from "../sections/m2/act3.section.astro";
+import M2Actividad4 from "../sections/m2/act4.section.astro";
 ---
 
 <!doctype html>
@@ -28,35 +33,45 @@ import Actividad3 from "../sections/m1/act3.section.astro";
       <section class="bg-cyan-950 text-zinc-200 grid place-content-center">
         <h2 class="font-extrabold text-6xl">Módulo 1</h2>
       </section>
-      <Actividad1 title="Cosmovisiones" />
-      <Actividad2 title="Corrientes filosóficas" />
-      <Actividad3 title="Sociedad, Cultura y Creencias" />
+      <M1Actividad1 title="Cosmovisiones" />
+      <M1Actividad2 title="Corrientes filosóficas" />
+      <M1Actividad3 title="Sociedad, Cultura y Creencias" />
+      <section class="bg-cyan-950 text-zinc-200 grid place-content-center">
+        <h2 class="font-extrabold text-6xl">Módulo 2</h2>
+      </section>
+      <M2ActividadPre title="Visión del Mundo Actual" />
+      <M2Actividad1 title="Poder, Estado y Ciudadanía" />
+      <M2Actividad2
+        title="Antecedentes Económicos, Políticos y Culturales de México en el Contexto de la Globalización"
+      />
+      <M2Actividad3 title="Regímenes Políticos y Revoluciones" />
+      <M2Actividad4 title="Guerras Mundiales y Crisis Económicas" />
     </main>
+
+    <script>
+      document.addEventListener("keydown", (e: KeyboardEvent) => {
+        const container = document.querySelector(
+          ".presentation-container"
+        ) as HTMLElement;
+        if (!container) return;
+
+        const sectionHeight = window.innerHeight;
+        const currentScroll = container.scrollTop;
+
+        if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+          // Siguiente sección
+          container.scrollTo({
+            top: currentScroll + sectionHeight,
+            behavior: "smooth",
+          });
+        } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+          // Sección anterior
+          container.scrollTo({
+            top: currentScroll - sectionHeight,
+            behavior: "smooth",
+          });
+        }
+      });
+    </script>
   </body>
 </html>
-
-<script>
-  document.addEventListener("keydown", (e: KeyboardEvent) => {
-    const container = document.querySelector(
-      ".presentation-container"
-    ) as HTMLElement;
-    if (!container) return;
-
-    const sectionHeight = window.innerHeight;
-    const currentScroll = container.scrollTop;
-
-    if (e.key === "ArrowDown" || e.key === "ArrowRight") {
-      // Siguiente sección
-      container.scrollTo({
-        top: currentScroll + sectionHeight,
-        behavior: "smooth",
-      });
-    } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
-      // Sección anterior
-      container.scrollTo({
-        top: currentScroll - sectionHeight,
-        behavior: "smooth",
-      });
-    }
-  });
-</script>

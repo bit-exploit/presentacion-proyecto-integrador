@@ -1,0 +1,43 @@
+---
+export interface Props {
+  title: string;
+}
+const { title } = Astro.props as Props;
+---
+
+<section
+  class="bg-gradient-to-r from-red-500 to-red-700 text-white p-10 text-center grid lg:place-content-center"
+>
+  <h2 class="text-5xl font-extrabold mb-16 tracking-wide">
+    {title}
+  </h2>
+  <div class="space-y-16 max-w-3xl mx-auto">
+    <div class="grid gap-4">
+      <p class="text-3xl font-semibold">Globalización</p>
+      <p class="text-3xl opacity-90">
+        Ha conectado al mundo, pero ha aumentado la desigualdad.
+      </p>
+    </div>
+
+    <div class="grid gap-4">
+      <p class="text-3xl font-semibold">Avances</p>
+      <p class="text-3xl opacity-90">
+        Tecnología, medicina y derechos humanos han mejorado la vida.
+      </p>
+    </div>
+
+    <div class="grid gap-4">
+      <p class="text-3xl font-semibold">Desafíos</p>
+      <p class="text-3xl opacity-90">
+        Cambio climático, pobreza y conflictos armados.
+      </p>
+    </div>
+
+    <div class="grid gap-4">
+      <p class="text-3xl font-semibold">Soluciones</p>
+      <p class="text-3xl opacity-90">
+        Educación, energías renovables y cooperación internacional.
+      </p>
+    </div>
+  </div>
+</section>
