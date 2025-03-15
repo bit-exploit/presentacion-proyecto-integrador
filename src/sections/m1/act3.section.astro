@@ -6,8 +6,20 @@ export interface Props {
 const { title } = Astro.props as Props;
 ---
 
-<section class="bg-red-500 text-white p-10">
-  <div class="w-full h-full grid items-baseline">
+<section class="relative bg-red-500 text-white p-10">
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+    <img
+      class="absolute object-cover bottom-[-25%] right-0 h-full rounded-tl-4xl opacity-0 2xl:opacity-80"
+      src="images/img-9.jpg"
+      alt="cosmovisiones"
+    />
+    <img
+      class="absolute object-cover bottom-0 right-[10%] w-xl rounded-4xl shadow-2xl opacity-20 2xl:opacity-80 -rotate-12"
+      src="images/img-10.jpg"
+      alt="cosmovisiones"
+    />
+  </div>
+  <div class="relative w-full h-full grid items-baseline">
     <div>
       <h2 class="font-extrabold mb-4 text-5xl">{title}</h2>
       <p class="leading-relaxed text-3xl">
