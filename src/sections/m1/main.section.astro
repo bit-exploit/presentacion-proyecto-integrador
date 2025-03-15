@@ -1,15 +1,43 @@
 <section
   id="home-section"
-  class="bg-cyan-100 text-zinc-800 grid place-content-center gap-24"
+  class="relative text-zinc-800 bg-cyan-200 grid place-content-center gap-24"
 >
-  <div class="grid gap-4">
-    <h1 class="font-bold text-5xl">
+  <img
+    class="absolute top-0 left-0 w-full h-full object-cover"
+    src="images/img-3.png"
+    alt="Agentes moralizadores1"
+  />
+  <div
+    id="main-img-container"
+    class="absolute top-0 left-0 w-full h-full overflow-hidden"
+  >
+    <img
+      class="absolute top-0 left-0 w-full h-full object-cover"
+      src="images/img-0.jpeg"
+      alt="Agentes moralizadores1"
+    />
+    <img
+      class="absolute top-0 left-0 w-full h-full object-cover"
+      src="images/img-1.jpeg"
+      alt="Agentes moralizadores2"
+    />
+    <img
+      class="absolute top-0 left-0 w-full h-full overflow-hidden object-cover"
+      src="images/img-2.png"
+      alt="Agentes moralizadores1"
+    />
+  </div>
+
+  <div class="absolute top-0 left-0 w-full h-full bg-zinc-100/90"></div>
+
+  <div class="relative grid gap-4">
+    <h1 class="font-extrabold text-5xl">
       Análisis integrado de los temas estudiados
     </h1>
     <p class="text-3xl text-right">Proyecto Integrador</p>
   </div>
 
-  <div class="text-2xl">
+  <div class="relative text-2xl">
     <ul>
       <li>Dulce Camila Chávez García</li>
       <li>Joana Betzabeth Ramos Rodríguez</li>
@@ -19,3 +47,41 @@
     </ul>
   </div>
 </section>
+
+<script>
+  import { gsap } from "gsap";
+
+  const imgContainer = document.getElementById("main-img-container");
+  const tl = gsap.timeline({ repeat: -1, yoyo: true });
+
+  if (imgContainer) {
+    [...imgContainer.children].forEach((el, i) => {
+      switch (i % 4) {
+        case 1:
+          tl.from(el, { left: "100%", delay: 2 }).to(el, {
+            left: "0",
+            duration: 2,
+          });
+          break;
+        case 2:
+          tl.from(el, { top: "100%", delay: 2 }).to(el, {
+            top: "0",
+            duration: 2,
+          });
+          break;
+        case 3:
+          tl.from(el, { left: "-100%", delay: 2 }).to(el, {
+            left: "0",
+            duration: 2,
+          });
+          break;
+        default:
+          tl.from(el, { top: "-100%", delay: 2 }).to(el, {
+            top: "0",
+            duration: 2,
+          });
+          break;
+      }
+    });
+  }
+</script>

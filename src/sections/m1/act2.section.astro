@@ -6,8 +6,30 @@ export interface Props {
 const { title } = Astro.props as Props;
 ---
 
-<section class="bg-purple-500 text-white grid place-content-center p-10">
-  <div class="max-w-5xl min-h-full grid gap-8">
+<section
+  class="relative bg-gradient-to-r from-pink-500 to-orange-500 text-white grid place-content-center p-10"
+>
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+    <img
+      id="m1-act2-img-0"
+      class="absolute left-[5%] bottom-[10%] rounded-4xl -rotate-12 w-64 h-64 object-fit shadow opacity-20 2xl:opacity-100"
+      src="images/img-6.jpg"
+      alt="co-fi"
+    />
+    <img
+      id="m1-act2-img-0"
+      class="absolute left-[5%] bottom-[50%] rounded-4xl rotate-12 w-64 h-64 object-fit shadow opacity-0 2xl:opacity-100"
+      src="images/img-7.jpg"
+      alt="co-fi"
+    />
+    <img
+      id="m1-act2-img-0"
+      class="absolute right-[-10%] bottom-[-40%] rounded-tl-4xl h-full object-fit shadow opacity-20 2xl:opacity-100"
+      src="images/img-8.jpeg"
+      alt="co-fi"
+    />
+  </div>
+  <div class="relative max-w-5xl min-h-full grid gap-8">
     <h2 class="text-5xl font-extrabold text-center">{title}</h2>
     <p class="text-3xl">
       Las corrientes filosóficas ofrecen diferentes formas de interpretar la
@@ -48,3 +70,7 @@ const { title } = Astro.props as Props;
     </ul>
   </div>
 </section>
+
+<script>
+  const img = document.getElementById("m1-act2-img-0");
+</script>
