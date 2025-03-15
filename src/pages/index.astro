@@ -1,5 +1,10 @@
 ---
 import "../styles/global.css";
+
+import MainSection from "../sections/m1/main.section.astro";
+import Actividad1 from "../sections/m1/act1.section.astro";
+import Actividad2 from "../sections/m1/act2.section.astro";
+import Actividad3 from "../sections/m1/act3.section.astro";
 ---
 
 <!doctype html>
@@ -14,15 +19,18 @@ import "../styles/global.css";
   </head>
   <body>
     <main class="presentation-container">
-      <section class="bg-blue-500">
-        <h1>Proyecto Integrador</h1>
-      </section>
-      <section class="bg-emerald-500">
+      <MainSection />
+
+      <!-- <section class="bg-emerald-500">
         <h2>Introducción</h2>
+      </section> -->
+
+      <section class="bg-cyan-950 text-zinc-200 grid place-content-center">
+        <h2 class="font-extrabold text-6xl">Módulo 1</h2>
       </section>
-      <section class="bg-rose-500">
-        <h2>Actividad 1</h2>
-      </section>
+      <Actividad1 title="Cosmovisiones" />
+      <Actividad2 title="Corrientes filosóficas" />
+      <Actividad3 title="Sociedad, Cultura y Creencias" />
     </main>
   </body>
 </html>

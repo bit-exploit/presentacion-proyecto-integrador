@@ -1,0 +1,50 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<section class="bg-purple-500 text-white grid place-content-center p-10">
+  <div class="max-w-5xl min-h-full grid gap-8">
+    <h2 class="text-5xl font-extrabold text-center">{title}</h2>
+    <p class="text-3xl">
+      Las corrientes filosóficas ofrecen diferentes formas de interpretar la
+      realidad y la existencia humana.
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-2xl">
+      <h4 class="font-extrabold">Edad Moderna (Siglos XVII–XVIII):</h4>
+      <li>
+        <strong>Racionalismo:</strong> La razón como fuente de conocimiento.
+      </li>
+      <li>
+        <strong>Empirismo:</strong> La experiencia como base del conocimiento.
+      </li>
+      <h4 class="font-extrabold">Edad Moderna (Siglos XVII–XVIII):</h4>
+
+      <li>
+        <strong>Idealismo:</strong> La realidad es una construcción mental.
+      </li>
+      <li>
+        <strong>Existencialismo:</strong> La realidad surge de la experiencia personal.
+      </li>
+      <li>
+        <strong>Positivismo:</strong> Solo el conocimiento científico es válido.
+      </li>
+      <li>
+        <strong>Estructuralismo:</strong> La realidad resulta de estructuras sociales.
+      </li>
+      <li>
+        <strong>Pragmatismo:</strong> Lo verdadero es lo útil.
+      </li>
+      <li>
+        <strong>Fenomenología:</strong> Describe la percepción personal de la realidad.
+      </li>
+      <li>
+        <strong>Historicism:</strong> El conocimiento humano depende de la historia
+        y el contexto.
+      </li>
+    </ul>
+  </div>
+</section>
